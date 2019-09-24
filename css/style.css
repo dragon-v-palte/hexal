@@ -93,7 +93,7 @@ a:focus {
 
 .images {
 	padding: 15px 40px;
-
+	position: relative;
 	max-width: 1140px;
 	margin: 0 auto;
 }
@@ -102,7 +102,7 @@ a:focus {
 	border-top: 2px solid #989898;
 	border-bottom: 2px solid #989898;		
 	margin: 0 -135px;
-	height: 947px;
+	height: 1500px;
 }
 	
 .images__list {
@@ -121,7 +121,7 @@ a:focus {
 .images__item img{
 	width: 250px;
 	height: 280px;
-	transition: .3s;
+	transition: .5s;
 	clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 	cursor: pointer;
 }
@@ -157,6 +157,39 @@ a:focus {
 	width: 250px;
 	height: 140px;
 	border-right: 2px solid #989898;
+}
+
+.images__top,
+.images__bottom {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 1;
+}
+
+.images__top.change-img,
+.images__bottom.change-img {
+	opacity: 0;
+}
+
+.indicators {
+	position: absolute;
+	left: -135px;
+	bottom: 20px;
+}
+
+.indicators__item {
+	float: left;
+	list-style: none;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+	background: #bebebe;
+	margin-right: 5px;
+}
+
+.indicators__item.active {
+	background: #686868;
 }
 
 .person {	
@@ -222,7 +255,7 @@ font-family: 'Maven Pro', sans-serif;
 }
 
 .person__subcribe i:hover {
-	opacity: .7
+	opacity: .3
 }
 
 .message-form {	
@@ -321,4 +354,22 @@ font-family: 'Maven Pro', sans-serif;
 	line-height: 16px;
 	margin: 0;
 	color: #454545;
+}
+
+@media (min-width: 768px) {
+	.images__border {
+		height: 1540px;
+	}
+}
+
+@media (min-width: 992px) {
+	.images__border {
+		height: 1120px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.images__border {
+		height: 947px;
+	}
 }
