@@ -26,37 +26,30 @@ var imagesRow = function() {
 		
 	var firstLine, secondLine;
 	
-	if (document.documentElement.clientWidth >= 1200)
+	if (document.documentElement.clientWidth >= 1440)
 		{	
 		firstLine = 4;
 		secondLine = 5;
 		}
 	
-	if (document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth >= 992)
+	if (document.documentElement.clientWidth < 1440 && document.documentElement.clientWidth >= 1200)
 		{	
 		firstLine = 3;
 		secondLine = 4;
 		}
-	if (document.documentElement.clientWidth < 992 && document.documentElement.clientWidth >= 768)
+	if (document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth >= 992)
 		{	
 		firstLine = 2;
 		secondLine = 3;
 		}
 	for (let i = 0; i < (imagesList.childElementCount / (firstLine + secondLine)); i++)	
 	{		
-		var bl = i * (firstLine + secondLine);
-		var br = bl + (firstLine - 1);
-		var ml = br + 1;
-		var mr = ml + (secondLine - 1);
-		console.log(bl + " " + br + " " + ml + " " + mr)
-		if (bl < imagesList.childElementCount)
-			imagesList.getElementsByClassName("images__item")[bl].classList.add("images__item--border-left");
-		if (br < imagesList.childElementCount)
-			imagesList.getElementsByClassName("images__item")[br].classList.add("images__item--border-right");
-		if (ml < imagesList.childElementCount)
-			imagesList.getElementsByClassName("images__item")[ml].classList.add("images__item--margin-left");
-		if (mr < imagesList.childElementCount)
-			imagesList.getElementsByClassName("images__item")[mr].classList.add("images__item--margin-right");
+		var marginLeftValue = i * (firstLine + secondLine);
+		var marginRightValue = marginLeftValue + (firstLine - 1);
+		if (marginLeftValue < imagesList.childElementCount)
+			imagesList.getElementsByClassName("images__item")[marginLeftValue].classList.add("images__item--margin-left");
+		if (marginRightValue < imagesList.childElementCount)
+			imagesList.getElementsByClassName("images__item")[marginRightValue].classList.add("images__item--margin-right");
 	}	
 };
 
