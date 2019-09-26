@@ -2,8 +2,8 @@ var imagesList = document.getElementsByClassName("images__list")[0];
 
 window.onload  = function(){
     imagesRow();
-	for (let i = 0; i < imagesList.childElementCount; i++)
-		imagesList.getElementsByClassName("images__item")[i].getElementsByTagName("img")[1].src = "img/images-" + (Math.floor(Math.random()* 13) + 1) + ".jpg";
+	//for (let i = 0; i < imagesList.childElementCount; i++)
+		//imagesList.getElementsByClassName("images__item")[i].getElementsByTagName("img")[1].src = "img/images-" + (Math.floor(Math.random()* 5) + 1) + ".jpg";
 }
 
 window.onresize = function() {

@@ -1,12 +1,16 @@
 .item {
-	padding: 50px 0 100px;
+	padding: 30px 0 100px;
+}
+
+.item__content {
+	text-align: center;
+	padding-bottom: 50px;
+	border-bottom: 2px solid #bebebe;
 }
 
 .item__image {
 	width: 50%;
-	float: right;
-	margin-left: 30px;
-	margin-bottom: 30px;
+	margin: 30px auto;
 }
 
 .item__name {
@@ -18,48 +22,38 @@
 	text-align: justify;
 }
 
-.item__content {
-	padding-bottom: 50px;
-	border-bottom: 2px solid #bebebe;
-}
 
-.portfolio-more {
-	padding: 50px 0;
-	text-align: center;
-}
-
-.portfolio-more__title {
+.blog-more__title {
 	text-align: center;
 	font-size: 32px;
 	color: #2eb398;
 }
 
-.portfolio-more__list {
+.blog-more__list {
 	padding: 20px 0 50px;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: space-around;
-	
+	flex-wrap: wrap;
 }
 
-.portfolio-more-item {
-	font-family: 'Maven Pro', sanf-serif;
+.blog-more-item {
 	margin: 20px;
 	display: flex;
 	flex-direction: column;
 	background-color: #fafafa;
+	font-family: 'Maven Pro', sans-serif;
 	padding: 20px;
-	width: 40%;
+	width: 80%;
 }
 
-.portfolio-more-item__image {
+.blog-more-item__image {
 	position: relative;
 	overflow: hidden;
 	height: 200px;
 }
 
-.portfolio-more-item__image img {
+.blog-more-item__image img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -68,35 +62,35 @@
 	transition: .3s;
 }
 
-.portfolio-more-item__image:hover img {
+.blog-more-item__image:hover img {
 	transform: translate(-50%, -50%) scale(1.1, 1.1);
 }
 
-.portfolio-more-item__content {
+.blog-more-item__content {
 	position: relative;
 	padding: 20px 0;
 	text-align: center;
 }
 
-.portfolio-more-item__name {
-	color: #656565;
+.blog-more-item__name {
+	color: #787878;
 	font-size: 20px;
 	line-height: 20px;
 }
 
-.portfolio-more-item__name:hover {
+.blog-more-item__name:hover {
 	color: #454545;
-	border-bottom: 2px solid #454545;
+	border-bottom: 2px solid #454545
 }
 
-.portfolio-more-item__text {
+.blog-more-item__text {
 	color: #989898;
 	font-size: 14px;
 	line-height: 18px;
 	margin: 10px 0;
 }
 
-.portfolio-more-item__button {
+.blog-more-item__button {
 	font-size: 14px;
 	text-transform: uppercase;
 	border: 0;
@@ -106,12 +100,18 @@
 	background: #2eb398;
 }
 
-.portfolio-more-item__button:hover {
+.blog-more-item__button:hover {
 	opacity: .7
 }
 
+@media (min-width: 576px) {
+	.blog-more-item {
+		width: 40%;
+	}
+}
+
 @media (min-width: 992px) {
-	.portfolio-more-item {
+	.blog-more-item {
 		width: 20%;
 	}
 }
